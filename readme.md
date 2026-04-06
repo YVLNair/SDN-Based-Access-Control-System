@@ -20,25 +20,39 @@ Design and implement a Software Defined Networking (SDN) based access control sy
 ## Installation
 
 ### 1. Update system
+```bash
 sudo apt update && sudo apt upgrade -y
+```
 
 ### 2. Install required packages
+```bash
 sudo apt install -y build-essential gcc make linux-headers-$(uname -r)
+```
 
 ### 3. Install Mininet (for SDN simulation)
+```bash
 sudo apt install -y mininet
+```
 
 ### 4. Clone the repository
+```bash
 git clone https://github.com/YVLNair/SDN-Based-Access-Control-System.git
+```
 
 ### 5. Navigate to project directory
+```bash
 cd SDN-Based-Access-Control-System
+```
 
 ### 6. Run environment check
+```bash
 sudo ./environment-check.sh
+```
 
 ### 7. Build the project
+```bash
 make
+```
 
 ---
 
