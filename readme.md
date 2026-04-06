@@ -17,6 +17,31 @@ Design and implement a Software Defined Networking (SDN) based access control sy
 
 ---
 
+## Installation
+
+### 1. Update system
+sudo apt update && sudo apt upgrade -y
+
+### 2. Install required packages
+sudo apt install -y build-essential gcc make linux-headers-$(uname -r)
+
+### 3. Install Mininet (for SDN simulation)
+sudo apt install -y mininet
+
+### 4. Clone the repository
+git clone https://github.com/YVLNair/SDN-Based-Access-Control-System.git
+
+### 5. Navigate to project directory
+cd SDN-Based-Access-Control-System
+
+### 6. Run environment check
+sudo ./environment-check.sh
+
+### 7. Build the project
+make
+
+---
+
 ## System Overview
 
 The system uses a centralized SDN controller (POX) to enforce access control policies.
@@ -31,20 +56,20 @@ Unauthorized hosts are blocked since no forwarding rules are installed.
 
 ### 1. Copy Controller File to POX Directory
 
-```bash id="qk2r0l"
+```bash
 cp access_control.py ~/pox/pox/
 ```
 
 ### 2. Start POX Controller
 
-```bash id="qlw3zv"
+```bash
 cd ~/pox
 ./pox.py access_control
 ```
 
 ### 3. Start Mininet Topology
 
-```bash id="x8u1s7"
+```bash
 sudo mn --topo single,3 --mac --controller=remote
 ```
 
@@ -54,7 +79,7 @@ sudo mn --topo single,3 --mac --controller=remote
 
 ### Allowed Hosts
 
-```bash id="u0z3m1"
+```bash
 h1 ping h2
 h1 iperf -s &
 h2 iperf -c h1
@@ -62,7 +87,7 @@ h2 iperf -c h1
 
 ### Blocked Hosts
 
-```bash id="7c5d2p"
+```bash
 h3 ping h1
 h3 iperf -c h1
 ```
@@ -82,7 +107,7 @@ h3 iperf -c h1
 
 ## Flow Table Verification
 
-```bash id="p2z8q1"
+```bash
 sudo ovs-ofctl dump-flows s1
 ```
 
@@ -132,7 +157,7 @@ Screenshots/logs included in the repository:
 
 ## Project Structure
 
-```id="f5z9o2"
+```
 sdn-access-control/
 ├── access_control.py
 ├── README.md
