@@ -34,12 +34,17 @@ sudo apt install -y build-essential gcc make linux-headers-$(uname -r)
 sudo apt install -y mininet
 ```
 
-### 4. Clone the repository
+### 4. Install POX Controller
+```bash
+git clone https://github.com/noxrepo/pox.git
+```
+
+### 5. Clone the repository
 ```bash
 git clone https://github.com/YVLNair/SDN-Based-Access-Control-System.git
 ```
 
-### 5. Navigate to project directory
+### 6. Navigate to project directory
 ```bash
 cd SDN-Based-Access-Control-System
 ```
