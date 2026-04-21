@@ -43,17 +43,6 @@ git clone https://github.com/YVLNair/SDN-Based-Access-Control-System.git
 ```bash
 cd SDN-Based-Access-Control-System
 ```
-
-### 6. Run environment check
-```bash
-sudo ./environment-check.sh
-```
-
-### 7. Build the project
-```bash
-make
-```
-
 ---
 
 ## System Overview
